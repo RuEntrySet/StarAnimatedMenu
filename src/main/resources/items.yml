@@ -1,0 +1,157 @@
+#-----------------------------------------------------------------------------------#
+#                                                                                   #
+#                              StarAnimatedMenu                                     #
+#  Plugin developer: _VELSEN_                                                       #
+#  Technical support: https://discord.gg/UrbdeuMHjW                                 #
+#  Tested versions: Spigot (1.8-1.16.5)                                             #
+#                                                                                   #
+#-----------------------------------------------------------------------------------#
+#Download menu examples: https://drive.google.com/file/d/1EnICZeJm2EHjVea2C7Rl1_xIT5Xe0EvG/view?usp=sharing
+items:
+  Item:
+    Type: Normal # Types: Normal(all blocks), Color(POTION/ARROW), Leather_Equipment, Skull(SKULL_ITEM), Banner(BANNER), Enchanted_Book(ENCHANTED_BOOK), Book(WRITTEN_BOOK, BOOK_AND_QUILL), Command(COMMAND,COMMAND_CHAIN,COMMAND_MINECART,COMMAND_REPEATING), Spawn_Egg(MONSTER_EGG), Firework(FIREWORK)
+    Material: 'DIAMOND_BLOCK'
+    Data: 0
+    Amont: 1
+    Name: '&a&n&lTEST_BLOCK'
+    Lore:
+      - "PAPI test %vault_eco_balance%"
+      - "&fThis is the best plugin, do you agree?"
+      - "&fLet's go!"
+    Flags: # Types: HIDE_ATTRIBUTES, HIDE_ENCHANTS, HIDE_DESTROYS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE
+      - 'HIDE_ATTRIBUTES'
+      - 'HIDE_UNBREAKABLE'
+    Enchantments:
+      - 'SILK_TOUCH:1'
+      - 'DAMAGE_ALL:9'
+  Iron:
+    Type: Normal
+    Material: 'IRON_BLOCK'
+    Data: 0
+    Amont: 2
+  Potion:
+    Type: Color
+    Material: 'POTION'
+    Data: 0
+    Amont: 1
+    Name: '&d&n&lElven Ale'
+    Lore:
+      - '&aDrink Me!'
+      - '&fLEFT_CLICK'
+    Flags:
+      - 'HIDE_ATTRIBUTES'
+      - 'HIDE_POTION_EFFECTS'
+    Enchantments:
+      - 'SILK_TOUCH:1'
+    PotionEffects:
+      - 'SPEED:1:100'
+      - 'JUMP:1:200'
+    Color: # Generator: https://www.w3schools.com/colors/colors_rgb.asp
+      Red: 0
+      Green: 240
+      Blue: 100
+  Helmet:
+    Type: Leather_Equipment
+    Material: 'LEATHER_HELMET'
+    Data: 0
+    Name: '&4&n&lRed Helmet'
+    Amont: 1
+    Lore:
+      - "&bDon't forget to put on your hat!"
+      - '&fLEFT_CLICK'
+    Flags:
+      - 'HIDE_ATTRIBUTES'
+      - 'HIDE_UNBREAKABLE'
+    Enchantments:
+      - 'PROTECTION_ENVIRONMENTAL:5'
+    Unbreakable: true
+    Color:
+      Red: 255
+      Green: 0
+      Blue: 0
+  Banner:
+    Type: Banner
+    Material: 'BANNER'
+    Data: 0
+    Name: '&3BANNER'
+    Amont: 1
+    Lore:
+      - "&fThis is the best plugin, do you agree?"
+      - "&fLet's go!"
+    Flags:
+      - 'HIDE_ATTRIBUTES'
+      - 'HIDE_ENCHANTS'
+    Enchantments:
+      - 'PROTECTION_ENVIRONMENTAL:5'
+    Pattern:
+      # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/block/banner/PatternType.html
+      - 'BROWN:DIAGONAL_LEFT'
+      - 'LIME:DIAGONAL_RIGHT'
+      - 'RED:CIRCLE_MIDDLE'
+  Book:
+    Type: Enchanted_Book
+    Material: 'ENCHANTED_BOOK'
+    Data: 0
+    Amont: 1
+    Name: '&dENCHANTED_BOOK'
+    Lore:
+      - "&fThis is the best plugin, do you agree?"
+      - "&fLet's go!"
+    Flags:
+      - 'HIDE_ATTRIBUTES'
+      - 'HIDE_UNBREAKABLE'
+    Stored:
+      - 'DAMAGE_ALL:7'
+      - 'SILK_TOUCH:5'
+  Letter:
+    Type: Book
+    Material: 'WRITTEN_BOOK'
+    Data: 0
+    Amont: 1
+    Name: '&dBOOK'
+    Lore:
+      - "&fThis is the best plugin, do you agree?"
+      - "&fLet's go!"
+    Flags:
+      - 'HIDE_ATTRIBUTES'
+      - 'HIDE_UNBREAKABLE'
+    Author: '&aSergey'
+    Pages:
+      - "&cThis is the best plugin, do you agree?\n&fLet's go!"
+      - "&cClose"
+    Generation: 'COPY_OF_COPY' # Типы: COPY_OF_COPY, COPY_OF_ORIGINAL, ORIGINAL, TATTERED
+  Command:
+    Type: Command
+    Material: 'COMMAND_CHAIN'
+    Data: 0
+    Amont: 1
+    Name: '&3COMMAND_CHAIN'
+    Lore:
+      - "&fThe Command Block"
+    Flags:
+      - 'HIDE_ATTRIBUTES'
+      - 'HIDE_UNBREAKABLE'
+    Command: 'time set 1000'
+    CName: '&3COMMAND_CHAIN'
+  Egg:
+    Type: Spawn_Egg
+    Material: 'MONSTER_EGG'
+    Data: 0
+    Amont: 1
+    Name: '&4Spawn_Egg'
+    Entity: 'PIG'
+  Skull:
+    Type: Skull
+    Material: 'SKULL_ITEM'
+    Data: 3
+    Amont: 1
+    Name: '&8Skull'
+    #Web: https://minecraft-heads.com/custom-heads/head-database
+    Value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzE3YTdmMjA1NzlmZWMyNTFhZTg2ZTU4OTY5OWM2YTMyNTUyMTE5NmE2OGVkMDQ1NzhmZGFhYzI5YzdmNzcyMyJ9fX0='
+  Firework:
+    Type: Firework
+    Material: 'FIREWORK'
+    Data: 0
+    Amont: 1
+    Name: '&2Firework'
+    Power: 5

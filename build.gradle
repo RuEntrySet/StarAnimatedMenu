@@ -1,0 +1,59 @@
+plugins {
+    id 'java-library'
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+}
+
+repositories {
+    mavenCentral()
+
+    maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven { url = 'https://oss.sonatype.org/content/repositories/central' }
+
+    maven {
+
+        name 'Puharesource'
+        url 'https://repo.puha.io/repo/'
+    }
+
+    maven {
+        url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/'
+    }
+
+    maven {
+        url "https://repository.pretronic.net/repository/pretronic/"
+    }
+
+    maven { url 'https://jitpack.io' }
+
+    maven {
+        url = 'https://repo.rosewooddev.io/repository/public/'
+    }
+
+}
+
+dependencies {
+
+    compileOnly 'me.clip:placeholderapi:2.10.9'
+
+    compileOnly 'net.pretronic.dkcoins:dkcoins-api:1.16.3.250'
+
+    compileOnly 'org.black_ixx:playerpoints:3.0.3'
+
+    shadow files('libs/spigot.jar')
+
+    compileOnly files('libs/vault.jar')
+
+    testImplementation 'junit:junit:4.13.1'
+
+}
+
+tasks {
+    jar {
+        enabled = false
+        dependsOn(shadowJar)
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

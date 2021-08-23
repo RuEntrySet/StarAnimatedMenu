@@ -1,0 +1,35 @@
+#-----------------------------------------------------------------------------------#
+#                                                                                   #
+#                              StarAnimatedMenu                                     #
+#  Plugin developer: _VELSEN_                                                       #
+#  Technical support: https://discord.gg/UrbdeuMHjW                                 #
+#  Tested versions: Spigot (1.8-1.16.5)                                             #
+#                                                                                   #
+#-----------------------------------------------------------------------------------#
+#Download menu examples: https://drive.google.com/file/d/1EnICZeJm2EHjVea2C7Rl1_xIT5Xe0EvG/view?usp=sharing
+Connects:
+  connect1:
+    host: 'localhost'
+    port: 3306
+    database: 'staranimatedmenu1'
+    user: 'root'
+    password: ''
+  connect2:
+    host: 'localhost'
+    port: 3306
+    database: 'staranimatedmenu2'
+    user: 'root'
+    password: ''
+Querys:
+  query1:
+    connect: connect1
+    query: "SELECT * FROM `table` WHERE name='title'"
+    column: string
+  query2:
+    connect: connect1
+    query: "SELECT * FROM `table` WHERE name='title'"
+    column: int
+  query3:
+    connect: connect2
+    query: "SELECT * FROM `table` WHERE name='title'"
+    column: boolean

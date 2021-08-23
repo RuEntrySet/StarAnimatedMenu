@@ -1,0 +1,35 @@
+#-----------------------------------------------------------------------------------#
+#                                                                                   #
+#                              StarAnimatedMenu                                     #
+#  Plugin developer: _VELSEN_                                                       #
+#  Technical support: https://discord.gg/UrbdeuMHjW                                 #
+#  Tested versions: Spigot (1.8-1.16.5)                                             #
+#                                                                                   #
+#-----------------------------------------------------------------------------------#
+#Download menu examples: https://drive.google.com/file/d/1EnICZeJm2EHjVea2C7Rl1_xIT5Xe0EvG/view?usp=sharing
+#
+# When sending a message, you can use the methods ;actionbar: ;title:
+# Example: message: 'This test was created for an example;title:Yes%nl% This was an example;actionbar:Note the chat'
+#
+messages:
+  prefix: '&aStar&dAnimated&fMenu &8➠ &f'
+  no_permission: '&cYou do not have permission &a<permission>&c to use!'
+  console_usage: '&aUsage: &f/sam reload/list/open <menu> <player>'
+  player_usage: '&aUsage: &f/sam reload/list/open <menu>/close <player>'
+  reload: '&aSuccessful reload config and other files!'
+  open: '&fYou have successfully opened the &a<menu> &fmenu'
+  open_others: '&fYou have successfully opened the &a<menu> &fmenu for player &a<player>'
+  hover_menu: 'Click on the message to open the &a<menu> &fmenu'
+  player_offline: 'Server has not this player'
+  close_other: 'You have successfully closed menu to player &a<target>'
+  no_open: 'Player &a<target> &fhas not opened menu'
+  menu_not_exist: 'This menu does not exist'
+permissions:
+  default: 'sam'
+  reload: 'sam.reload'
+  list: 'sam.list'
+  close: 'sam.close'
+  open: 'sam.open'
+menus:
+  menu:
+    file: menu.yml
